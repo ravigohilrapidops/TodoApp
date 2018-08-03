@@ -1,0 +1,32 @@
+/* .todo-inner{
+    display: flex;
+    justify-content: center;
+} */
+/* 
+.todo-inner h1
+{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-inner table{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+} */
+
+.todo-inner table{
+  margin: 0 auto;
+}
+
+table td span.active{
+    background-color: lightgreen;
+    width:100%;
+}
+
+table td span.pending{
+    background-color: lightsalmon;
+    width:100%;
+}

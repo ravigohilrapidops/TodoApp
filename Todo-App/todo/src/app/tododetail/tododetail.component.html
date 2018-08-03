@@ -1,0 +1,13 @@
+<div class="dashboard-wrapper">
+  <div class="detail-inner" *ngIf = 'todo'>
+    <h1><u>{{todo.task}} Detail</u></h1>
+    <div class="content-details">
+       <ul>
+         <li><span>Id:</span> {{todo.id}}</li>
+         <li><span>Task Name:</span> {{todo.task}}</li>
+         <li [style.background]='todo && todo.isCompleted == true?"lightgreen":"lightsalmon"'><span>Status:</span> {{todo.isCompleted|booleantransform}}</li>
+       </ul>
+    </div>
+  </div>
+  <button name="addNew" class="addtodo" routerLink="/todos/add">Add New Todo</button>
+</div>

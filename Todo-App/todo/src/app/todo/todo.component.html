@@ -1,0 +1,31 @@
+<div class="dashboard-wrapper">
+    
+    <div class="todo-inner">
+        <h1><u>{{todotitle}}</u></h1>
+        <div class="deleteMsg" [style.display]='msg && msg=="done"?"block":"none"'>Delete Successfull!</div>
+        <table class="tbl" *ngIf = "todoList && todoList.length">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Task Name</th>
+                <th>Status</th>
+                <th>View Detail</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let list of todoList">
+                <td>{{list.id}}</td>
+                <td>{{list.task}}</td>
+                <td><span [class]='list.isCompleted && list.isCompleted == true ?"active":"pending"'>{{list.isCompleted|booleantransform}} </span></td>
+                <td><a [routerLink]="['/todos/detail', list.id]">Details</a></td>
+                <td><a [routerLink]="['/todos/edit', list.id]">Edit</a></td>
+                <td><a href="javascript:void(0)"  (click)="removeTodo(list)">Delete</a></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="to-todo"  *ngIf = "todoList && !todoList.length">There is No any todo!</div>
+    <button name="addNew" class="addtodo" routerLink="/todos/add">Add New Todo</button>
+</div>

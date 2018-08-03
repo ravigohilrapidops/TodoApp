@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+/* Style the header */
+header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    width: 100%;
+    height: auto; /* only for demonstration, should be removed */
+    background: #ccc;
+    /* padding: 20px; */
+}
+
+nav ul li 
+{
+    float: left;
+    list-style: none;
+    margin-right: 20px;
+    font-size: 25px;
+
+}
+
+nav ul li a
+{
+    text-decoration: none;
+    color: #f1f1f1;
+
+}
+
+nav ul li a:hover
+{
+    text-decoration: none;
+    color: darkgrey;
+
+}
+
+nav ul li a.Active
+{
+    color: darkgrey;
+
+}
+
+section {
+    float: left;
+    padding-bottom: 20px;
+    width: 100%;
+    background-color: #f1f1f1;
+    height: auto; /* only for demonstration, should be removed */
+}
+
+/* Style the footer */
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.dashboard-wrapper{
+    text-align: center;
+}
+
+.dashboard-wrapper .addtodo{
+    margin-top:34px;
+}

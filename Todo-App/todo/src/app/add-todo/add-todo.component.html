@@ -1,0 +1,18 @@
+<div class="dashboard-wrapper">
+  <div class="addform-inner">
+    <h1><u>{{action}}</u></h1>
+    <form (ngSubmit)="createTodo(TodoForm)" #TodoForm="ngForm">
+      <div class="invalid-form" [style.display]="TodoForm.submitted && (!TodoForm.form.valid)?'block':'none'">Invalide Form!</div>
+      Task
+      <input type="text" [(ngModel)]="todo.task" #tasknameField name="task" required/>
+      <p class="error" [style.display]="TodoForm.submitted && (!tasknameField.value)?'block':'none'">*Please Add Task Name.</p>
+      <br/>
+      <br/>
+      Task Completed:
+      <input type="checkbox" name="status" [(ngModel)]="todo.isCompleted">
+      <br/>
+      <br/>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>

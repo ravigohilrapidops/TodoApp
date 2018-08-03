@@ -1,0 +1,28 @@
+.dashboard-content{
+    width: 100%;
+}
+.dashboard-content .content-box{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.dashboard-content .content-box li{
+    list-style: none;
+    margin-right: 20px;
+    border: 1px solid black;
+    width: 20%;
+    text-align: center;
+    height: 60px;
+    background-color: lightgray;
+}
+.dashboard-content .content-box li h3{
+    margin-top:0px;
+    margin-bottom: 0px;
+    background-color: lightcoral;
+}
+
+.dashboard-content .content-box li .count{
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
